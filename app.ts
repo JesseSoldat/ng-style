@@ -1,5 +1,7 @@
 import {Component} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
+
+//117
 //NG-CLASS
 // @Component({
 // 	selector: 'class-sample-app',
@@ -110,6 +112,29 @@ import {bootstrap} from 'angular2/platform/browser';
   		Red Text
   	</span>
   </div>
+
+  <h4 class="ui horizontal divider header">
+  	Play with the color and font-size here
+  </h4>
+
+  <div class="ui input">
+  	<input type="text" name="color" value="{{color}}" #colorinput>
+  </div>
+
+  <h4 class="ui horizontal divider header">
+  	ngStyle with object property from variable
+  </h4>
+
+  <div>
+      <span [ngStyle]="{color: colorinput.value}">
+        {{ colorinput.value }} text
+      </span>
+  </div>
+
+
+
+
+
 	`
 })
 class StyleSampleApp {
